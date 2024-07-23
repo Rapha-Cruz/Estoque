@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorias</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Categorias</h1>
+    </header>
+
+    <ul>
+        <% if (categorias.length> 0) { %>
+            <% categorias.forEach(categoria=> { %>
+                <li>
+                    <%= categoria.nome_categoria %>
+                </li>
+                <% }) %>
+                    <% } else { %>
+                        <p>Não há categorias disponíveis.</p>
+                        <% } %>
+    </ul>
+</body>
+
+</html>
